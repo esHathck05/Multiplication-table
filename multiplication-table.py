@@ -1,8 +1,8 @@
 """
 multiplication-table.py
-Author: <your name here>
-Credit: <list sources used, if any>
-Assignment:
+Author: Esther Hacker
+Credit: N/A
+Assignment: Multiplication Table
 
 Write and submit a Python program that prints a multiplication table. The user 
 must be prompted to give the width and height of the table before it is printed.
@@ -21,3 +21,14 @@ Height of multiplication table: 8
   7  14  21  28  35  42  49  56  63  70
   8  16  24  32  40  48  56  64  72  80
 """
+
+width = int(input("Width of Multiplication Table: ")) + 1
+height = int(input("Height of Multiplication Table: ")) + 1
+
+for i in range(1, height):
+    for j in range(1, width):
+        if j == width - 1:
+            print(i*j, end="""
+""")
+        else:
+            print("{0:>3}".format(i*j), end="  ")
